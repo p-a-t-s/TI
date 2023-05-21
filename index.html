@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+        <meta name="projekt" content="width=device-width, initial-scale=1.0">
+        <title>CAT Consulting</title>
+
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        
+        <header class="header">
+            <a href="#" class="logo">CAT Consulting</a>
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">O nas</a>
+                <a href="#services">Usługi</a>
+                <a href="#pracownicy">Pracownicy</a>
+                <a href="#contact">Kontakt</a>
+            </nav>
+        </header>
+
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Cześć, jesteśmy</h3>
+                <h1>CAT Consulting</h1>
+                <h3>i pomagamy wdrażać <span>kocie projekty!</span></h3>
+                <p>Nie musisz dłużej szukać!</p>
+            </div>
+            <div>
+                <img id="kotwpracy" src="obrazy/bxs-cat.png" alt="Kot w pracy">
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-img">
+                <img id="cat" src="obrazy/kotNaKomputerze.jpg" alt="ceo kot">
+            </div>
+
+            <div class="about-content">
+                <h2 class="heading">O nas</h2>
+                <h3>Agencja consultingowa</h3>
+                <p>Nasi eksperci to wyjątkowe koty, które opanowały sztukę doradzania i rozwiązują nawet najbardziej skomplikowane problemy biznesowe. Co możemy dla Ciebie zrobić?
+                    Wszystko! Potrzebujesz strategii rozwoju, analizy rynku czy optymalizacji procesów? Nasi futrzaści konsultanci mają ogromne doświadczenie w tych obszarach. Jesteśmy również ekspertami w dziedzinie rozwoju umiejętności drapania mebli. 
+                    Co wyróżnia nas spośród innych firm consultingowych? Nasze koty posiadają naturalne umiejętności przywódcze. Znają się na zarządzaniu zespołem i potrafią zmotywować do działania nawet najbardziej leniwe myszy.
+                    Dodatkowo, nasze usługi są niezwykle elastyczne. Nasi konsultanci mogą pracować z dowolnego miejsca - biurka, krzesełka czy kociego drapaka.
+                    Nie czekaj dłużej! Skontaktuj się z Cat Consultants i dołącz do grona zadowolonych klientów. Zaufaj instynktowi i oddaj swoje biznesowe sprawy w ręce najbardziej kompetentnych kotów w branży consultingowej!
+                 </p>
+                <a href="#" class="btn" id="przekieruj">Dowiedz się więcej</a>    
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <h2 class="heading">Nasze usługi</h2>
+            <div class="services-container">
+                        <p class="uslugilista">Kocie masaże</p>
+                        <p class="uslugilista">Drapanie kanapy</p>
+                        <p class="uslugilista">Zrzucanie szklanek</p>
+                        <p class="uslugilista">Naprawa kabli</p>
+                        <p class="uslugilista">Kocia zumba</p>
+                        <p class="uslugilista">Nocne koncerty</p>
+            </div>
+        </section>      
+
+        <section class="pracownicy" id="pracownicy">
+            <h2 class="heading">Nasi pracownicy</h2>
+            <div class="cat-container">
+                <div class="cat-box">
+                    <img id="cat" src="obrazy/bruce.jpg" alt="Bruce">
+                    <div class="cat-layer">
+                        <h4>Bruce</h4>
+                        <p>Do grona jego zainteresowań zawodowych należy destrukcja kabli oraz urządzeń elektronicznych. Świetnie odnajduje się w sprawach detektywistycznych, szczególnie dotyczących poszukiwania zaginionego jedzenia. 
+                            
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cat-box">
+                    <div class="cat-layer">
+                        <h4>Cali</h4>
+                        <p>Specjalizuje się w projektach związanych z drobnymi nocnymi naprawami urządzeń domowych oraz w kocim masażu.
+                        </p>
+                    </div>
+                    <img id="cat" src="obrazy/cali.jpg" alt="Cali">
+                </div>
+
+                <div class="cat-box">
+                    <img id="cat" src="obrazy/kotslodziak.jpg" alt="Nala">
+                    <div class="cat-layer">
+                        <h4>Nala</h4>
+                        <p>Ekspertka w drapaniu, intruktor kociego joggingu, skutecznie motywuje do aktywności fizycznej. 
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="kontakt" id="contact">
+            <h2 class="heading">Skontaktuj się z nami!</h2>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" id="imienazwisko" placeholder="Imię i nazwisko">
+                    <input id="email" type="email" placeholder="Adres e-mail">
+                </div>
+
+                <div class="input-box">
+                    <input type="number" placeholder="Numer telefonu">
+                    <input type="text" placeholder="Temat wiadomości">
+                </div>
+
+                <textarea id="tekst" cols="30" rows="10" placeholder="Twoja wiadomość"></textarea>
+                <input type="submit" value="Wyślij wiadomość" class="btn" onclick="Pobierz()">
+            </form>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Copyright &copy; 2023 by Patrycja Sajkowska</p>
+            </div>
+        </footer>
+
+        <script>
+            function Pobierz() {
+                event.preventDefault();
+                imienazwisko = document.getElementById("imienazwisko").value;
+                email = document.getElementById("email").value;
+                tekst = document.getElementById("tekst").value;
+
+                if (imienazwisko == "" || email == "" || tekst == "") {
+                    alert("Uzupełnij dane w formularzu!");
+                } else {
+                    if (email.includes("@")) {
+                        alert("Dziękujemy za wiadomość!")
+                    } else {
+                        alert ("Niepoprawny adres e-mail!")
+                    }
+                }
+            }
+
+            przekierujBtn= document.getElementById("przekieruj");
+
+            przekierujBtn.addEventListener("click", function(event) {
+            event.preventDefault();
+            window.open("https://www.youtube.com/watch?v=80UWsHtRvsI", "_blank", "noopener");
+            });
+        </script>
+    </body>
+</html>
